@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" name="result" id="input">
+	<button onclick="sum()" >+</button>
+	<button onclick="minus()" >-</button>
+	<button onclick="multi()" >*</button>
+	<button onclick="devide()" >/</button>
+
+	<script type="text/javascript">
+		var input = document.getElementById("input")
+		
+		function sum() {
+			input.value += '+';
+		}
+
+		function minus() {
+			input.value += '-';
+		}
+
+		function multi() {
+			input.value += '*';
+		}
+
+		function devide() {
+			input.value += '/';
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html >
+  <head>
+	<title>Caculator</title>
+	<style type="text/css">
+
+	  .cal{
+		height:350px;
+		width:280px;
+		padding:20px;
+		background-color: white;
+		background: linear-gradient(360deg,#0be881,#485460);
+	  }
+
+	  input[type=button]{
+		width:50px;
+		height:50px;
+		color:white;
+		font-weight:bold;
+		background: linear-gradient(90deg,#006064,#009688);
+		border:none;
+		font-size: 20px;
+	  }
+
+	  
+
+	  input[type=button]:hover{
+		background: linear-gradient(180deg,#006064,#0be881);
+	  }
+
+	  input[type=text]{
+		width:100%;
+		height:50px;
+		border:3px ;
+		font-size:15px;
+		padding-left: 5px;
+		cursor: pointer;
+		font-weight: bolder;
+	  }
+
+	</style>
+  </head>
+  <body>
+
+	<center>
+	  	<div class="cal">
+			<input type="text" class="result" id="result" >
+		
+			<button ><input type="button" onclick="clean()"  style="width: 190px" value="C"></button>
+			<button ><input type="button" onclick="insert('/')" value="/"></button><br>
+		
+		
+		  	<button ><input type="button" onclick="insert(7)" value="7"></button>
+			<button ><input type="button" onclick="insert(8)" value="8"></button>
+			<button ><input type="button" onclick="insert(9)" value="9"></button>
+			<button ><input type="button" onclick="insert('*')" value="x"></button><br>
+		
+
+		  	<button ><input type="button" onclick="insert(4)" value="4"></button>
+			<button ><input type="button" onclick="insert(5)" value="5"></button>
+			<button ><input type="button" onclick="insert(6)" value="6"></button>
+			<button ><input type="button" onclick="insert('-')" value="-"></button><br>
+		
+		
+		  	<button ><input type="button" onclick="insert(1)" value="1"></button>
+			<button ><input type="button" onclick="insert(2)" value="2"></button>
+			<button ><input type="button" onclick="insert(3)" value="3"></button>
+			<button ><input type="button" onclick="insert('+')" value="+"></button>
+		
+
+			<button ><input type="button" onclick="insert(0)" style="width:190px" value="0"></button>
+			<button ><input type="button" onclick="equal()" value="="></button>  
+
+			</div>
+	</center>
+	<script type="text/javascript">
+		function insert(num){
+		  	var res = document.getElementById("result").value;
+		  	document.getElementById("result").value = res+num;
+		}
+
+		function equal(){
+			var res = document.getElementById("result").value;
+			if(res){
+				document.getElementById("result").value = eval(res);
+				}
+			}
+
+		function clean(){
+			document.getElementById("result").value="";
+		}
+	</script>
+
+</body>
+</html>

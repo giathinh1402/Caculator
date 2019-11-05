@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+    	  <input type="text" placeholder="" name="" id="input1">
+        <input type="text" placeholder="" name="" id="input2">
+        <button onclick="onSumClick()">Sum</button>
+	<br>
+        <label id="result"><b>Count</b></label>
+
+
+        <script>
+            function onSumClick(){
+              var value1 = document.getElementById("input1").value;
+              var value2 = document.getElementById("input2").value;
+
+              var value1Int = parseInt(value1);
+              var value2Int = parseInt(value2);
+
+              var Sum = value1Int + value2Int;
+
+              // console.log(Sum);
+              document.getElementById("result").innerHTML = Sum;
+            }
+          </script>
+</body>
+</body>
+</html>

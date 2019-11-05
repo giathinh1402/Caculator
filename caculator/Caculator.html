@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="text" placeholder="" name="" id="input1">
+    <input type="text" placeholder="" name="" id="input2">
+        <button onclick="onSumClick()">Sum</button>
+        <button onclick="onMinusClick()">Minus</button>
+        <button onclick="onMultiClick()">Multi</button>
+        <button onclick="onDevideClick()">Devide</button>
+    <br>
+        <label id="result"><b></b></label>
+
+        <script>
+            function onSumClick(){
+              var value1 = document.getElementById("input1").value;
+              var value2 = document.getElementById("input2").value;
+
+              var value1Int = parseInt(value1);
+              var value2Int = parseInt(value2);
+
+              var Sum = value1Int + value2Int;
+
+              // console.log(Sum);
+              document.getElementById("result").innerHTML = Sum;
+            }
+
+            function onMinusClick(){
+              var minus1 = document.getElementById("input1").value;
+              var minus2 = document.getElementById("input2").value;
+
+              var minus1Int = parseInt(minus1);
+              var minus2Int = parseInt(minus2);
+
+              var Minus = minus1Int - minus2Int;
+
+              document.getElementById("result").innerHTML = Minus;
+            }
+
+            function onMultiClick(){
+              var multi1 = document.getElementById("input1").value;
+              var multi2 = document.getElementById("input2").value;
+
+              var multi1Int = parseInt(multi1);
+              var multi2Int = parseInt(multi2);
+
+              var Multi = multi1Int * multi2Int;
+
+              document.getElementById("result").innerHTML = Multi;
+            }
+
+            function onDevideClick(){
+              var devide1 = document.getElementById("input1").value;
+              var devide2 = document.getElementById("input2").value;
+
+              var devide1Int = parseInt(devide1);
+              var devide2Int = parseInt(devide2);
+
+              var Devide = devide1Int / devide2Int;
+
+              document.getElementById("result").innerHTML = Devide;
+            }
+        </script>
+</body>
+</html>
